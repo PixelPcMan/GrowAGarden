@@ -1,0 +1,10 @@
+local function eliminarDragonFruits()
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Model") and objeto.Name == "Dragon Fruit" then
+            objeto:Destroy()
+        end
+    end
+end
+
+-- Ejecutar la función
+eliminarDragonFruits()
