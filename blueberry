@@ -1,0 +1,9 @@
+local function eliminarBlueberries()
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Model") and objeto.Name == "Blueberry" then
+            objeto:Destroy()
+        end
+    end
+end
+
+eliminarBlueberries()
