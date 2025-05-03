@@ -1,0 +1,10 @@
+local function eliminarDurians()
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Model") and objeto.Name == "Durian" then
+            objeto:Destroy()
+        end
+    end
+end
+
+-- Ejecutar la función
+eliminarDurians()
