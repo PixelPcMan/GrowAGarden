@@ -1,0 +1,9 @@
+local function eliminarBananas()
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Model") and objeto.Name == "Banana" then
+            objeto:Destroy()
+        end
+    end
+end
+
+eliminarBananas()
