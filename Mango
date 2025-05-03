@@ -1,0 +1,9 @@
+local function eliminarMangos()
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Model") and objeto.Name == "Mango" then
+            objeto:Destroy()
+        end
+    end
+end
+
+eliminarMangos()
