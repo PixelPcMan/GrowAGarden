@@ -1,8 +1,8 @@
--- Script para eliminar todas las partes con los nombres "10", "9", "8" y "7"
+-- Script para eliminar todas las partes con los nombres "11", "10", "9", "8" y "7"
 local function eliminarPartes()
     local workspace = game:GetService("Workspace")
     local partesEliminadas = 0
-    local nombresAEliminar = {"10", "9", "8", "7"}
+    local nombresAEliminar = {"11", "10", "9", "8", "7"}
 
     for _, objeto in ipairs(workspace:GetDescendants()) do
         if objeto:IsA("Part") and table.find(nombresAEliminar, objeto.Name) then
@@ -11,7 +11,7 @@ local function eliminarPartes()
         end
     end
 
-    print(partesEliminadas .. " partes con los nombres '10', '9', '8' y '7' han sido eliminadas.")
+    print(partesEliminadas .. " partes con los nombres '11', '10', '9', '8' y '7' han sido eliminadas.")
 end
 
 -- Ejecutar la función
