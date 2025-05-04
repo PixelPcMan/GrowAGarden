@@ -1,0 +1,17 @@
+-- Script para eliminar todas las partes con el nombre "8"
+local function eliminarPartes()
+    local workspace = game:GetService("Workspace")
+    local partesEliminadas = 0
+
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Part") and objeto.Name == "8" then
+            objeto:Destroy()
+            partesEliminadas = partesEliminadas + 1
+        end
+    end
+
+    print(partesEliminadas .. " partes con el nombre '8' han sido eliminadas.")
+end
+
+-- Ejecutar la función
+eliminarPartes()
