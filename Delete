@@ -1,0 +1,16 @@
+-- Obtener la carpeta "Trees" dentro de "Plot"
+local treesFolder = game.Workspace.Map.Plots.Plot.Trees
+
+-- Verificar si la carpeta existe
+if treesFolder then
+    -- Iterar sobre todos los hijos de la carpeta "Trees"
+    for _, child in ipairs(treesFolder:GetChildren()) do
+        -- Comprobar si el nombre del hijo es "Blossom"
+        if child.Name == "Blossom" then
+            -- Eliminar el modelo "Blossom"
+            child:Destroy()
+        end
+    end
+else
+    print("La carpeta 'Trees' no se encontró.")
+end
