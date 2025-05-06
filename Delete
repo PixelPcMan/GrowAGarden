@@ -1,16 +1,16 @@
--- Obtener la carpeta "Trees" dentro de "Plot"
-local treesFolder = game.Workspace.Map.Plots.Plot.Trees
+local function eliminarPartes()
+    local workspace = game:GetService("Workspace")
+    local partesEliminadas = 0
 
--- Verificar si la carpeta existe
-if treesFolder then
-    -- Iterar sobre todos los hijos de la carpeta "Trees"
-    for _, child in ipairs(treesFolder:GetChildren()) do
-        -- Comprobar si el nombre del hijo es "Blossom"
-        if child.Name == "Blossom" then
-            -- Eliminar el modelo "Blossom"
-            child:Destroy()
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Model") and objeto.Name == "Blossom" then
+            objeto:Destroy()
+            partesEliminadas = partesEliminadas + 1
         end
     end
-else
-    print("La carpeta 'Trees' no se encontró.")
+
+    print(partesEliminadas .. " modelos con el nombre 'Blossom' han sido eliminados.")
 end
+
+-- Ejecutar la función
+eliminarPartes()
