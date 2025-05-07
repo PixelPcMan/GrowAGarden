@@ -1,0 +1,10 @@
+local function eliminarTomatoes()
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Model") and objeto.Name == "Tomato" then
+            objeto:Destroy()
+        end
+    end
+end
+
+-- Ejecutar la función
+eliminarTomatoes()
