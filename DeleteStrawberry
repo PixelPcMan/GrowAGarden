@@ -1,0 +1,16 @@
+local function eliminarPartes()
+    local workspace = game:GetService("Workspace")
+    local partesEliminadas = 0
+
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Model") and objeto.Name == "Strawberry" then
+            objeto:Destroy()
+            partesEliminadas = partesEliminadas + 1
+        end
+    end
+
+    print(partesEliminadas .. " modelos con el nombre 'Strawberry' han sido eliminados.")
+end
+
+-- Ejecutar la función
+eliminarPartes()
