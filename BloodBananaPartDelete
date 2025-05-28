@@ -1,0 +1,17 @@
+local function eliminarPartes()
+    local workspace = game:GetService("Workspace")
+    local partesEliminadas = 0
+    local nombresAEliminar = {"4", "5", "6", "3"}
+
+    for _, objeto in ipairs(workspace:GetDescendants()) do
+        if objeto:IsA("Part") and table.find(nombresAEliminar, objeto.Name) then
+            objeto:Destroy()
+            partesEliminadas = partesEliminadas + 1
+        end
+    end
+
+    print(partesEliminadas .. " partes con los nombres '4', '5', '6' y '3' han sido eliminadas.")
+end
+
+-- Ejecutar la función
+eliminarPartes()
